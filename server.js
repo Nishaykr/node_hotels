@@ -1,18 +1,18 @@
 const express = require('express')
 const app = express();
 const db = require('./db');
-require('dotenv').config();
-
+require('dotenv').config(); 
+      
 const PORT = process.env.PORT || 3000; 
-
+    
 //middleware
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());//req,body
  
-
+ 
 app.get('/' , function (req, res){
     res.send('Welocme to your hotel0 ')
-})
+}) 
 
 const menuRoutes = require('./routes/menuRoutes');
 app.use('/menu', menuRoutes);
