@@ -20,7 +20,7 @@ router.post('/' , async (req,res)=>{
 })
 
 //here get method for menu item
-router.get('/' ,async(req,res)=>{
+router.post('/' ,async(req,res)=>{
     try {
         const data = await Menu.find();
         console.log('data fetched');
